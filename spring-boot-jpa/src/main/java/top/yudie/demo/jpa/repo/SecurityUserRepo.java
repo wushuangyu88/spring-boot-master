@@ -29,7 +29,7 @@ public interface SecurityUserRepo extends CrudRepository<SecurityUser, String> {
     int updateUserNameByUserCode(@Param(value="userCode") String userCode, @Param(value="userName")String userName);
     
     /**
-     * 批量操作方法扩展，大量数据时可以显著提升性能
+     * 批量更新方法，未实现
      */
 	@Modifying
 	@Transactional
