@@ -1,7 +1,15 @@
 package top.yudie.demo.jpa.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
 
 
 /**
@@ -15,7 +23,8 @@ public class SecurityUser implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GenericGenerator(name="idGenerator", strategy="uuid")//32位uuid，由hibernate生成
+    @GeneratedValue(generator="idGenerator")
 	@Column(name="USER_ID")
 	private String userId;
 

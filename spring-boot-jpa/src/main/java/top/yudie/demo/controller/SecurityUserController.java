@@ -1,7 +1,6 @@
 package top.yudie.demo.controller;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.annotation.Resource;
 
@@ -14,7 +13,7 @@ import top.yudie.demo.jpa.entity.SecurityUser;
 import top.yudie.demo.jpa.repo.SecurityUserRepo;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/securityUser")
 public class SecurityUserController {
 	@Resource
 	SecurityUserRepo securityUserRepo;
