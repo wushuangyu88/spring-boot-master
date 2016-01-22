@@ -26,7 +26,7 @@ public interface SecurityUserRepo extends CrudRepository<SecurityUser, String> {
 //    @Query("update SecurityUser u set u.userName = :userName where u.userCode = :userCode ")
 //    int updateUserNameByUserCode(@Param(value="userCode") String userCode, @Param(value="userName")String userName);
     @Query("update SecurityUser u set u.userName = ?2 where u.userCode = ?1 ")
-    int updateUserNameByUserCode(@Param(value="userCode") String userCode, @Param(value="userName")String userName);
+    int updateUserNameByUserCode(String userCode, String userName);
     
     /**
      * 批量更新方法，未实现
